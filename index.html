@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تسجيل دخول</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background: #ff7e5f;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>تسجيل الدخول</h2>
+    <input type="text" placeholder="اسم المستخدم">
+    <input type="password" placeholder="كلمة المرور">
+    <button class="login-btn" id="loginBtn">Login</button>
+</div>
+
+<script>
+    const loginBtn = document.getElementById("loginBtn");
+
+    loginBtn.addEventListener("mouseover", () => {
+        const newX = Math.random() * (window.innerWidth - 100);
+        const newY = Math.random() * (window.innerHeight - 50);
+        loginBtn.style.position = "absolute";
+        loginBtn.style.left = `${newX}px`;
+        loginBtn.style.top = `${newY}px`;
+    });
+</script>
+
+</body>
+</html>
